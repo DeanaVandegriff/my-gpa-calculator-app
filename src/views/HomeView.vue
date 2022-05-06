@@ -1,4 +1,24 @@
+<script>
+export default {
+  data: function () {
+    return {
+      message: "Welcome to myGPA Calculator",
+    };
+  },
+  created: function () {},
+  methods: {},
+};
+</script>
+
 <template>
+  <div class="home">
+    <h1>{{ message }}</h1>
+  </div>
+</template>
+
+<style></style>
+
+<!-- <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
@@ -15,4 +35,4 @@ export default {
     HelloWorld,
   },
 };
-</script>
+</script> -->
