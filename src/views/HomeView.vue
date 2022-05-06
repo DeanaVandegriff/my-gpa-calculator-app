@@ -13,6 +13,7 @@ export default {
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
+    <img alt="Inspiration" src="../assets/calculator.png" />
   </div>
 </template>
 
