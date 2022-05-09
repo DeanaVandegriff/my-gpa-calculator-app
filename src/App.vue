@@ -11,6 +11,8 @@
     <router-link to="/logout">Log Out</router-link>
     |
     <router-link to="/courses">Courses</router-link>
+    |
+    <router-link to="/courses/new">Enter a Course</router-link>
   </nav>
   <router-view />
 </template>
