@@ -1,10 +1,10 @@
 <script>
 import axios from "axios";
+
 export default {
   data: function () {
     return {
       course: {},
-      editCoursesParams: {},
     };
   },
   created: function () {
@@ -16,7 +16,7 @@ export default {
   methods: {
     updateCourse: function () {
       console.log("Update a course!");
-      axios.patch("http://localhost3000/courses/" + this.$route.params.id + ".json", this.course).then((response) => {
+      axios.patch("http://localhost:3000/courses/" + this.$route.params.id, this.course).then((response) => {
         console.log("Success", response.data);
         this.$router.push("/courses");
       });
@@ -44,11 +44,16 @@ export default {
         </div>
         <div class="form-group">
           Semester:
+          <input type="text" v-model="course.level" />
+        </div>
+        <div class="form-group">
+          Semester:
           <input type="text" v-model="course.semester_taken" />
         </div>
       </div>
       <input type="submit" value="Update" />
     </form>
-    <a href="`/courses/${course.id}`">Back to all Courses</a>
+    <br />
+    <a href="/courses">Back to all Courses</a>
   </div>
 </template>
