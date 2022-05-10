@@ -47,6 +47,7 @@ export default {
           <input type="text" v-model="newCoursesParams.level" />
         </div>
       </div>
+      <br />
       <input type="submit" value="Create Course" />
     </form>
   </div>
