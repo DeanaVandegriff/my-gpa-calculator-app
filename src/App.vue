@@ -1,21 +1,6 @@
 <template>
-  <!-- <nav>
-    <router-link to="/">Home</router-link>
-    |
-    <router-link to="/about">About</router-link>
-    |
-    <router-link to="/signup">Sign Up</router-link>
-    |
-    <router-link to="/login">Log In</router-link>
-    |
-    <router-link to="/logout">Log Out</router-link>
-    |
-    <router-link to="/courses">Courses</router-link>
-    |
-    <router-link to="/courses/new">Enter a Course</router-link>
-  </nav> -->
   <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: palevioletred">
       <a class="navbar-brand" href="#">
         <img
           src="https://thumbs.dreamstime.com/b/calculator-icon-isolated-white-background-vector-185767448.jpg"
