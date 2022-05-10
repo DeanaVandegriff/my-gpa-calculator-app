@@ -18,7 +18,7 @@ export default {
 
 <template>
   <div class="index">
-    <h1>Zach Morris' Courses</h1>
+    <h1>Courses</h1>
 
     <!-- <div v-for="course in courses" v-bind:key="course.id">
       <h2>Course: {{ course.name }}</h2>
@@ -27,7 +27,7 @@ export default {
     <table class="table table-bordered">
       <thead class="thead-light">
         <tr>
-          <th scope="col" sortable="semester_taken">Semester</th>
+          <th scope="col" data-field="semester_taken" data-sortable="true">Semester</th>
           <th scope="col">Course Name</th>
           <th scope="col">Grade</th>
           <th scope="col">Credits</th>

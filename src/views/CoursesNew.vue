@@ -46,10 +46,6 @@ export default {
           Level:
           <input type="text" v-model="newCoursesParams.level" />
         </div>
-        <div class="course-group">
-          user_id:
-          <input type="text" v-model="newCoursesParams.user_id" />
-        </div>
       </div>
       <input type="submit" value="Create Course" />
     </form>
