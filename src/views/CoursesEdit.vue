@@ -21,6 +21,12 @@ export default {
         this.$router.push("/courses");
       });
     },
+    destroyCourse: function (course) {
+      axios.delete("http://localhost:3000/courses/" + course.id).then((response) => {
+        console.log("course removed", response);
+        this.$router.push("/courses");
+      });
+    },
   },
 };
 </script>
@@ -51,8 +57,11 @@ export default {
           <input type="text" v-model="course.semester_taken" />
         </div>
       </div>
-      <input type="submit" value="Update" />
+      <input type="submit" value="Update Course" />
     </form>
+    <br />
+    <button v-on:click="destroyCourse(course)">Delete Course</button>
+    <br />
     <br />
     <a href="/courses">Back to all Courses</a>
   </div>
