@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: palevioletred">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: cadetblue">
       <a class="navbar-brand" href="#">
         <img
           src="https://thumbs.dreamstime.com/b/calculator-icon-isolated-white-background-vector-185767448.jpg"

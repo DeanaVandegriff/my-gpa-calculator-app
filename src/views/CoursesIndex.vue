@@ -19,6 +19,7 @@ export default {
 <template>
   <div class="index">
     <h1>Courses</h1>
+    <h1>GPA:</h1>
 
     <!-- <div v-for="course in courses" v-bind:key="course.id">
       <h2>Course: {{ course.name }}</h2>

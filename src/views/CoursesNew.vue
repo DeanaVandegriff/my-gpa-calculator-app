@@ -12,7 +12,7 @@ export default {
     createCourse: function () {
       console.log("Enter a Course");
       axios
-        .post("http://localhost:3000/courses", this.newCoursesParams)
+        .post("http://localhost:3000/courses.json", this.newCoursesParams)
         .then((response) => {
           console.log("course entered", response.data);
         })
@@ -40,11 +40,20 @@ export default {
         </div>
         <div class="course-group">
           Credits:
-          <input type="text" v-model="newCoursesParams.credits" />
+          <select class="custom-select-sm" v-model="newCoursesParams.credits">
+            <option selected>credits</option>
+            <option>0.5</option>
+            <option>1</option>
+          </select>
         </div>
         <div class="course-group">
           Level:
-          <input type="text" v-model="newCoursesParams.level" />
+          <select class="custom-select-sm" v-model="newCoursesParams.level">
+            <option selected>levels</option>
+            <option>traditional</option>
+            <option>honors</option>
+            <option>AP</option>
+          </select>
         </div>
       </div>
       <br />
