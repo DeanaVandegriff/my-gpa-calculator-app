@@ -24,37 +24,62 @@ export default {
 <template>
   <div class="courses-new">
     <form v-on:submit.prevent="createCourse()">
-      <h1>Enter a course</h1>
-      <div>
+      <h1>Enter a Course</h1>
+      <div class="container">
         <div class="course-group">
-          Semester:
-          <input type="text" v-model="newCoursesParams.semester_taken" />
+          Course Name:
+          <input class="form-control-sm" type="text" v-model="newCoursesParams.name" />
         </div>
-        <div class="course-group">
-          Course name:
-          <input type="text" v-model="newCoursesParams.name" />
-        </div>
-        <div class="course-group">
-          Grade:
-          <input type="text" v-model="newCoursesParams.grade" />
-        </div>
-        <div class="course-group">
-          Credits:
-          <select class="custom-select-sm" v-model="newCoursesParams.credits">
-            <option selected>credits</option>
-            <option>0.5</option>
-            <option>1</option>
-          </select>
-        </div>
-        <div class="course-group">
-          Level:
-          <select class="custom-select-sm" v-model="newCoursesParams.level">
-            <option selected>levels</option>
-            <option>traditional</option>
-            <option>honors</option>
-            <option>AP</option>
-          </select>
-        </div>
+      </div>
+      <div class="course-group">
+        Grade:
+        <select class="custom-select-sm" v-model="newCoursesParams.grade">
+          <option selected>grade</option>
+          <option>A+</option>
+          <option>A</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B</option>
+          <option>B-</option>
+          <option>C+</option>
+          <option>C</option>
+          <option>C-</option>
+          <option>D+</option>
+          <option>D</option>
+          <option>D-</option>
+          <option>F</option>
+        </select>
+      </div>
+      <div class="course-group">
+        Credits:
+        <select class="custom-select-sm" v-model="newCoursesParams.credits">
+          <option selected>credits</option>
+          <option>0.5</option>
+          <option>1</option>
+        </select>
+      </div>
+      <div class="course-group">
+        Level:
+        <select class="custom-select-sm" v-model="newCoursesParams.level">
+          <option selected>levels</option>
+          <option>traditional</option>
+          <option>honors</option>
+          <option>AP</option>
+        </select>
+      </div>
+      <div class="course-group">
+        Semester:
+        <select class="custom-select-sm" v-model="newCoursesParams.semester_taken">
+          <option selected>semester</option>
+          <option>9th Grade: Semester One</option>
+          <option>9th Grade: Semester Two</option>
+          <option>10th Grade: Semester One</option>
+          <option>10th Grade: Semester Two</option>
+          <option>11th Grade: Semester One</option>
+          <option>11th Grade: Semester Two</option>
+          <option>12th Grade: Semester One</option>
+          <option>12th Grade: Semester Two</option>
+        </select>
       </div>
       <br />
       <input type="submit" value="Create Course" />
