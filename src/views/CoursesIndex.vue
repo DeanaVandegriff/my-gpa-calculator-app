@@ -6,6 +6,8 @@ export default {
     return {
       courses: [],
       point_value: [],
+      total: "",
+      GPA: "",
     };
   },
   created: function () {
@@ -15,11 +17,12 @@ export default {
       console.log("Courses", this.courses, "Point Values", this.point_value);
     });
   },
-  // methods: {
-  //   pointSum() {
-  //     return this.courses.map(({ point_value }) => point_value).reduce((a, b) => a + b, 0);
-  //   },
-  // },
+  methods: {
+    pointSum() {
+      var total = this.courses.map(({ point_value }) => point_value).reduce((a, b) => a + b, 0);
+      this.GPA = Math.round((total / this.courses.length) * 100) / 100;
+    },
+  },
 };
 </script>
 
@@ -27,6 +30,7 @@ export default {
   <div class="index">
     <h1>Courses</h1>
     <button v-on:click="pointSum()">Total Points:</button>
+    <h2>{{ GPA }}</h2>
     <div class="container">
       <table class="table table-bordered">
         <thead class="thead-light">
