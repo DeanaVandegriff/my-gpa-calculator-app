@@ -13,12 +13,11 @@ export default {
   created: function () {
     axios.get("http://localhost:3000/courses.json").then((response) => {
       this.courses = response.data;
-      this.point_value = response.data[0].point_value;
-      console.log("Courses", this.courses, "Point Values", this.point_value);
+      console.log("Courses", this.courses);
     });
   },
   methods: {
-    pointSum() {
+    calcGPA() {
       var total = this.courses.map(({ point_value }) => point_value).reduce((a, b) => a + b, 0);
       this.GPA = Math.round((total / this.courses.length) * 100) / 100;
     },
@@ -29,7 +28,7 @@ export default {
 <template>
   <div class="index">
     <h1>Courses</h1>
-    <button v-on:click="pointSum()">Total Points:</button>
+    <button v-on:click="calcGPA()">Cumulative GPA:</button>
     <h2>{{ GPA }}</h2>
     <div class="container">
       <table class="table table-bordered">
