@@ -14,7 +14,7 @@ export default {
   <div class="home">
     <br />
     <!-- <h1>{{ message }}</h1> -->
-    <img alt="Inspiration" src="../assets/myGPA-logos.jpeg" />
+    <img alt="Inspiration" src="../assets/myGPA.png" />
   </div>
 </template>
 
