@@ -25,15 +25,13 @@ export default {
   <div class="courses-new">
     <form v-on:submit.prevent="createCourse()">
       <h1>Enter a Course</h1>
-      <div class="container">
-        <div class="course-group">
-          Course Name:
-          <input class="form-control-sm" type="text" v-model="newCoursesParams.name" />
-        </div>
+      <div class="course-group">
+        Course Name:
+        <input class="form-control-mx-auto" style="width: 200px" type="text" v-model="newCoursesParams.name" />
       </div>
       <div class="course-group">
         Grade:
-        <select class="custom-select-sm" v-model="newCoursesParams.grade">
+        <select class="custom-select" style="width: 200px" v-model="newCoursesParams.grade">
           <option selected>grade</option>
           <option>A+</option>
           <option>A</option>
@@ -52,7 +50,7 @@ export default {
       </div>
       <div class="course-group">
         Credits:
-        <select class="custom-select-sm" v-model="newCoursesParams.credits">
+        <select class="custom-select" style="width: 200px" v-model="newCoursesParams.credits">
           <option selected>credits</option>
           <option>0.5</option>
           <option>1</option>
@@ -60,7 +58,7 @@ export default {
       </div>
       <div class="course-group">
         Level:
-        <select class="custom-select-sm" v-model="newCoursesParams.level">
+        <select class="custom-select" style="width: 200px" v-model="newCoursesParams.level">
           <option selected>levels</option>
           <option>traditional</option>
           <option>honors</option>
@@ -69,7 +67,7 @@ export default {
       </div>
       <div class="course-group">
         Semester:
-        <select class="custom-select-sm" v-model="newCoursesParams.semester_taken">
+        <select class="custom-select" style="width: 200px" v-model="newCoursesParams.semester_taken">
           <option selected>semester</option>
           <option>9th Grade: Semester One</option>
           <option>9th Grade: Semester Two</option>
@@ -86,3 +84,9 @@ export default {
     </form>
   </div>
 </template>
+
+<style>
+.container-fluid {
+  padding-left: 30%;
+}
+</style>

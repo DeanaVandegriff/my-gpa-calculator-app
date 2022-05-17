@@ -1,13 +1,8 @@
 <template>
   <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: cadetblue">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #bed3f0">
       <a class="navbar-brand" href="#">
-        <img
-          src="https://thumbs.dreamstime.com/b/calculator-icon-isolated-white-background-vector-185767448.jpg"
-          width="40"
-          height="40"
-          alt=""
-        />
+        <!-- <img alt="image coming soon" src="../assets/graduate.png" width="40" height="40" /> -->
       </a>
       <button
         class="navbar-toggler"
@@ -68,6 +63,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #bed3f0;
 }
 
 nav {
