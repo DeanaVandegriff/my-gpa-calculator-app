@@ -33,21 +33,20 @@ export default {
     <button v-on:click="calcGPA()">Cumulative GPA:</button>
     <h2>{{ GPA }}</h2>
     <div class="container">
-      <table class="table table-bordered">
-        <!-- <table class="table table-bordered" data-toggle="table"> -->
+      <table class="table table-bordered table-striped" id="sortTable">
         <thead class="thead-light">
           <tr>
-            <!-- <th data-sortable="true" scope="semester_taken">Semester</th> -->
-            <th scope="col">Course Name</th>
-            <th scope="col">Grade</th>
+            <th scope="semester_taken" data-sortable="true">Semester</th>
+            <th scope="col" data-sortable="true">Course Name</th>
+            <th scope="col" data-sortable="true">Grade</th>
             <!-- <th scope="col">Credits</th>
             <th scope="col">Point Value</th> -->
-            <th scope="col">More Info</th>
+            <th scope="col" data-sortable="true">More Info</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="course in courses" v-bind:key="course.id">
-            <!-- <td>{{ course.semester_taken }}</td> -->
+            <td>{{ course.semester_taken }}</td>
             <td>{{ course.name }}</td>
             <td>{{ course.grade }}</td>
             <!-- <td>{{ course.credits }}</td>
@@ -59,3 +58,9 @@ export default {
     </div>
   </div>
 </template>
+<style>
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #bed3f0;
+}
+</style>
